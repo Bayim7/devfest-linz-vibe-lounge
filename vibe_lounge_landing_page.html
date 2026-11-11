@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Linz Vibe Lounge</title>
+
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gBlue: '#4285F4',
+                        gRed: '#EA4335',
+                        gYellow: '#FBBC05',
+                        gGreen: '#34A853',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom subtle background pattern for the hero section */
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 antialiased bg-slate-50 selection:bg-gBlue selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="flex gap-1">
+                        <div class="w-3 h-3 rounded-full bg-gBlue"></div>
+                        <div class="w-3 h-3 rounded-full bg-gRed"></div>
+                        <div class="w-3 h-3 rounded-full bg-gYellow"></div>
+                        <div class="w-3 h-3 rounded-full bg-gGreen"></div>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900 ml-2">DevFest Linz</span>
+                </div>
+                <div class="hidden sm:block">
+                    <a href="#challenges"
+                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Challenges</a>
+                    <a href="#rules"
+                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Rules</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8 animate-fade-in-up">
+                <span class="flex h-2 w-2 relative">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gGreen opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-gGreen"></span>
+                </span>
+                <span class="text-sm font-medium text-slate-600">Vibe Lounge is Open</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                Build with <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-gBlue via-gRed to-gYellow">Gemini</span><br />
+                in 45 Minutes.
+            </h1>
+
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600 mb-10">
+                Join the ultimate micro-hackathon. Grab a seat, pick a challenge, and write code at the speed of thought
+                using the Gemini API.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#redeem"
+                    class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-xl text-white bg-gBlue hover:bg-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1">
+                    <i class="fa-solid fa-cloud-arrow-down mr-2"></i> Redeem Cloud Credits
+                </a>
+                <a href="#challenges"
+                    class="inline-flex justify-center items-center px-8 py-4 border-2 border-slate-200 text-base font-medium rounded-xl text-slate-700 bg-white hover:border-slate-300 hover:bg-slate-50 transition-all">
+                    View Challenges
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative background elements -->
+        <div
+            class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-gBlue/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-gYellow/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+    </header>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">How It Works</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Four steps to glory. No pressure, maximum chaos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
+                        <i class="fa-solid fa-ticket text-2xl text-gBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1. Get Credits</h3>
+                    <p class="text-slate-400 text-sm">Redeem your provided Google Cloud budget to access the Gemini API.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
+                        <i class="fa-solid fa-code text-2xl text-gGreen"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">2. Pick a Tier</h3>
+                    <p class="text-slate-400 text-sm">Choose from Low-Code, Intermediate, or Hard Mode challenges.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center relative">
+                    <div
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-gRed shadow-[0_0_15px_rgba(234,67,53,0.3)]">
+                        <i class="fa-solid fa-shuffle text-2xl text-gRed"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gRed">3. The Twist</h3>
+                    <p class="text-slate-400 text-sm">At minute 20, the alarm sounds! <strong class="text-white">Musical
+                            Keyboards:</strong> swap laptops and finish your neighbor's code.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
+                        <i class="fa-solid fa-microphone-lines text-2xl text-gYellow"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">4. Demo Time</h3>
+                    <p class="text-slate-400 text-sm">You have 60 seconds to pitch whatever Frankenstein app you ended
+                        up with.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-4">Choose Your Challenge</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Whether you're a prompt engineering wizard or a
+                    seasoned full-stack developer, there is a track for you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Tier 1 Card -->
+                <div
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gGreen">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-leaf text-6xl text-gGreen"></i>
+                    </div>
+                    <div
+                        class="inline-block px-3 py-1 bg-gGreen/10 text-gGreen text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                        Tier 1 • Low-Code
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Portfolio with AI</h3>
+                    <p class="text-slate-600 mb-6 min-h-[80px]">
+                        Use Gemini to generate the HTML, CSS, and copy for a personal portfolio from scratch. Perfect
+                        for beginners and prompt engineers.
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                        <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
+                        <p class="text-xs text-slate-500">The new driver must use prompts to completely change the
+                            aesthetic (e.g., Cyberpunk, 1990s Geocities).</p>
+                    </div>
+                    <a href="#"
+                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                        View Starter Template
+                    </a>
+                </div>
+
+                <!-- Tier 2 Card -->
+                <div
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gYellow">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-map-location-dot text-6xl text-gYellow"></i>
+                    </div>
+                    <div
+                        class="inline-block px-3 py-1 bg-gYellow/10 text-yellow-700 text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                        Tier 2 • Intermediate
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Maps & AI Mashup</h3>
+                    <p class="text-slate-600 mb-6 min-h-[80px]">
+                        Combine the Google Maps platform with Gemini. Build a tool where clicking a map generates
+                        fictional historical events for that location.
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                        <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
+                        <p class="text-xs text-slate-500">Inherit the codebase and add one ridiculous, undocumented new
+                            feature before time runs out.</p>
+                    </div>
+                    <a href="#"
+                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                        View Starter Template
+                    </a>
+                </div>
+
+                <!-- Tier 3 Card -->
+                <div
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gRed">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-gamepad text-6xl text-gRed"></i>
+                    </div>
+                    <div
+                        class="inline-block px-3 py-1 bg-gRed/10 text-gRed text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                        Tier 3 • Hard Mode
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Multiplayer AI Game</h3>
+                    <p class="text-slate-600 mb-6 min-h-[80px]">
+                        Race to build a functional, web-based multiplayer game (trivia, prompt battle, etc.) powered
+                        entirely by Gemini API logic.
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                        <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
+                        <p class="text-xs text-slate-500">Pure chaos. Successfully deploy the broken game you inherit
+                            and pitch it to the room as a "feature."</p>
+                    </div>
+                    <a href="#"
+                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                        View Starter Template
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex gap-2 mb-6">
+                <div class="w-4 h-4 rounded-sm bg-gBlue"></div>
+                <div class="w-4 h-4 rounded-sm bg-gRed"></div>
+                <div class="w-4 h-4 rounded-sm bg-gYellow"></div>
+                <div class="w-4 h-4 rounded-sm bg-gGreen"></div>
+            </div>
+            <p class="text-slate-500 font-medium text-center mb-4">Proudly organized in collaboration with</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-6">
+                <span
+                    class="px-4 py-2 bg-slate-100 text-slate-800 rounded-lg font-semibold text-sm border border-slate-200 shadow-sm flex items-center hover:bg-slate-200 transition-colors cursor-default">
+                    <img src="src/dev-fest-logo.png" alt="GDG logo" class="w-5 h-5 mr-2 object-contain"> GDG
+                </span>
+                <span
+                    class="px-4 py-2 bg-slate-100 text-slate-800 rounded-lg font-semibold text-sm border border-slate-200 shadow-sm flex items-center hover:bg-slate-200 transition-colors cursor-default">
+                    <img src="src/dynatrace-logo.png" alt="Dynatrace Logo" class="w-5 h-5 mr-2 object-contain">
+                    Dynatrace
+                </span>
+                <span
+                    class="px-4 py-2 bg-slate-100 text-slate-800 rounded-lg font-semibold text-sm border border-slate-200 shadow-sm flex items-center hover:bg-slate-200 transition-colors cursor-default">
+                    <img src="src/yail-logo.png" alt="Young AI Leaders Linz Logo" class="w-5 h-5 mr-2 object-contain">
+                    Young
+                    AI Leaders Linz
+                </span>
+            </div>
+            <p class="text-slate-400 text-sm text-center">Powered by Google Cloud & Gemini</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
