@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -35,7 +36,6 @@
     </script>
 
     <style>
-        /* Custom subtle background pattern for the hero section */
         .hero-pattern {
             background-color: #f8fafc;
             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
@@ -67,10 +67,15 @@
                     <span class="font-bold text-xl tracking-tight text-slate-900 ml-2">DevFest Linz</span>
                 </div>
                 <div class="hidden sm:block">
-                    <a href="#challenges"
-                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Challenges</a>
-                    <a href="#rules"
-                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Rules</a>
+                    <a href="#how-it-works"
+                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">How It
+                        Works</a>
+                    <a href="#ideas"
+                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Starter
+                        Templates</a>
+                    <a href="#pitches"
+                        class="text-sm font-medium text-slate-600 hover:text-gBlue transition-colors px-3 py-2">Lightning
+                        Pitches</a>
                 </div>
             </div>
         </div>
@@ -80,34 +85,35 @@
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8 animate-fade-in-up">
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8">
                 <span class="flex h-2 w-2 relative">
                     <span
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gGreen opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-gGreen"></span>
                 </span>
-                <span class="text-sm font-medium text-slate-600">Vibe Lounge is Open</span>
+                <span class="text-sm font-medium text-slate-600">Open All Day • Zero Pressure</span>
             </div>
 
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
                 Build with <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-gBlue via-gRed to-gYellow">Gemini</span><br />
-                in 45 Minutes.
+                at Your Own Pace.
             </h1>
 
             <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600 mb-10">
-                Join the ultimate micro-hackathon. Grab a seat, pick a challenge, and write code at the speed of thought
-                using the Gemini API.
+                Not a strict hackathon—just a casual, open-format workshop. Drop in with a laptop or just your phone,
+                experiment with Google AI credits, and ship something fun in under an hour.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#redeem"
+                <!-- Replace href with the official Google AI credit link -->
+                <a href="INSERT_GOOGLE_CREDIT_LINK_HERE" target="_blank"
                     class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-xl text-white bg-gBlue hover:bg-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1">
-                    <i class="fa-solid fa-cloud-arrow-down mr-2"></i> Redeem Cloud Credits
+                    <i class="fa-solid fa-cloud-arrow-down mr-2"></i> Claim Google AI Credits
                 </a>
-                <a href="#challenges"
+                <a href="#ideas"
                     class="inline-flex justify-center items-center px-8 py-4 border-2 border-slate-200 text-base font-medium rounded-xl text-slate-700 bg-white hover:border-slate-300 hover:bg-slate-50 transition-all">
-                    View Challenges
+                    Explore Starter Templates
                 </a>
             </div>
         </div>
@@ -121,12 +127,13 @@
         </div>
     </header>
 
-    <!-- Rules Section -->
-    <section id="rules" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight mb-4">How It Works</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Four steps to glory. No pressure, maximum chaos.</p>
+                <h2 class="text-3xl font-bold tracking-tight mb-4">How the Vibe Lounge Works</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Drop in solo or with friends. Stay for 15 minutes or
+                    the whole afternoon.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -136,135 +143,187 @@
                         class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
                         <i class="fa-solid fa-ticket text-2xl text-gBlue"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">1. Get Credits</h3>
-                    <p class="text-slate-400 text-sm">Redeem your provided Google Cloud budget to access the Gemini API.
-                    </p>
+                    <h3 class="text-xl font-semibold mb-2">1. Grab Your Credits</h3>
+                    <p class="text-slate-400 text-sm">Claim your Google AI credits and generate an API key. Already
+                        claimed yours from the main DevFest page? Jump straight to Step 2.</p>
                 </div>
                 <!-- Step 2 -->
                 <div class="text-center">
                     <div
                         class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
-                        <i class="fa-solid fa-code text-2xl text-gGreen"></i>
+                        <i class="fa-solid fa-wand-magic-sparkles text-2xl text-gGreen"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">2. Pick a Tier</h3>
-                    <p class="text-slate-400 text-sm">Choose from Low-Code, Intermediate, or Hard Mode challenges.</p>
+                    <h3 class="text-xl font-semibold mb-2">2. Build Anything</h3>
+                    <p class="text-slate-400 text-sm">Use a starter template below or go completely off-script—on a
+                        laptop or your phone. Mentors are on standby to help.</p>
                 </div>
                 <!-- Step 3 -->
-                <div class="text-center relative">
+                <div class="text-center">
                     <div
-                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-gRed shadow-[0_0_15px_rgba(234,67,53,0.3)]">
-                        <i class="fa-solid fa-shuffle text-2xl text-gRed"></i>
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
+                        <i class="fa-solid fa-award text-2xl text-gRed"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gRed">3. The Twist</h3>
-                    <p class="text-slate-400 text-sm">At minute 20, the alarm sounds! <strong class="text-white">Musical
-                            Keyboards:</strong> swap laptops and finish your neighbor's code.</p>
+                    <h3 class="text-xl font-semibold mb-2">3. Claim Your Pin</h3>
+                    <p class="text-slate-400 text-sm">Show a mentor what you built using Google AI and instantly score
+                        an exclusive DevFest pin & badge.</p>
                 </div>
                 <!-- Step 4 -->
                 <div class="text-center">
                     <div
-                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-slate-700">
+                        class="w-16 h-16 mx-auto bg-slate-800 rounded-2xl flex items-center justify-center mb-6 border border-gYellow shadow-[0_0_15px_rgba(251,188,5,0.25)]">
                         <i class="fa-solid fa-microphone-lines text-2xl text-gYellow"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">4. Demo Time</h3>
-                    <p class="text-slate-400 text-sm">You have 60 seconds to pitch whatever Frankenstein app you ended
-                        up with.</p>
+                    <h3 class="text-xl font-semibold mb-2 text-gYellow">4. Lightning Pitches</h3>
+                    <p class="text-slate-400 text-sm">Stick around for the finale! Pitch your creation in 60 seconds.
+                        <strong class="text-white">Loudest audience applause</strong> wins the prizes.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Challenges Section -->
-    <section id="challenges" class="py-24 bg-slate-50">
+    <!-- Starter Templates Section -->
+    <section id="ideas" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-4">Choose Your Challenge</h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Whether you're a prompt engineering wizard or a
-                    seasoned full-stack developer, there is a track for you.</p>
+                <h2 class="text-4xl font-bold text-slate-900 tracking-tight mb-4">Starter Templates</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Build whatever you want using Google AI—or launch
+                    one of these ready-to-run templates and customize it in minutes.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-                <!-- Tier 1 Card -->
+                <!-- Starter 1 Card: No-Code -->
                 <div
-                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gGreen">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid fa-leaf text-6xl text-gGreen"></i>
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gGreen flex flex-col justify-between">
+                    <div>
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i class="fa-solid fa-mobile-screen-button text-6xl text-gGreen"></i>
+                        </div>
+                        <div
+                            class="inline-block px-3 py-1 bg-gGreen/10 text-gGreen text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                            No-Code • Phone Friendly
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">AI Portfolio or Linz Barista</h3>
+                        <p class="text-slate-600 mb-6 min-h-[80px]">
+                            Build a custom AI assistant in 15 minutes right in Google AI Studio—either an interactive
+                            "Chat with My Resume" bot or a sarcastic Austrian barista who recommends talks based on your
+                            mood.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                            <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                    class="fa-solid fa-sparkles text-gGreen mr-2"></i>Stretch Idea:</p>
+                            <p class="text-xs text-slate-500">Hit "Get Code" in AI Studio to turn your prompt into a
+                                shareable web page or add image input.</p>
+                        </div>
                     </div>
-                    <div
-                        class="inline-block px-3 py-1 bg-gGreen/10 text-gGreen text-xs font-bold rounded-full uppercase tracking-wider mb-6">
-                        Tier 1 • Low-Code
+                    <div class="space-y-2.5">
+                        <a href="https://aistudio.google.com/" target="_blank"
+                            class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2 text-xs"></i>Open Google AI Studio
+                        </a>
+                        <button onclick="copyTemplate('barista', this)"
+                            class="block w-full text-center px-4 py-2.5 rounded-xl bg-white text-slate-700 text-sm font-medium border border-slate-200 hover:bg-slate-50 transition-colors">
+                            <i class="fa-regular fa-copy mr-2"></i>Copy Barista System Prompt
+                        </button>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Portfolio with AI</h3>
-                    <p class="text-slate-600 mb-6 min-h-[80px]">
-                        Use Gemini to generate the HTML, CSS, and copy for a personal portfolio from scratch. Perfect
-                        for beginners and prompt engineers.
-                    </p>
-                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
-                        <p class="text-sm text-slate-700 font-medium mb-1"><i
-                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
-                        <p class="text-xs text-slate-500">The new driver must use prompts to completely change the
-                            aesthetic (e.g., Cyberpunk, 1990s Geocities).</p>
-                    </div>
-                    <a href="#"
-                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
-                        View Starter Template
-                    </a>
                 </div>
 
-                <!-- Tier 2 Card -->
+                <!-- Starter 2 Card: Maps Guide -->
                 <div
-                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gYellow">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid fa-map-location-dot text-6xl text-gYellow"></i>
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gYellow flex flex-col justify-between">
+                    <div>
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i class="fa-solid fa-map-location-dot text-6xl text-gYellow"></i>
+                        </div>
+                        <div
+                            class="inline-block px-3 py-1 bg-gYellow/10 text-yellow-700 text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                            API Mashup • Starter Code
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Maps & Gemini Local Guide</h3>
+                        <p class="text-slate-600 mb-6 min-h-[80px]">
+                            Combine Gemini with Google Maps links to build a hyper-specific Linz guide—like the best
+                            Leberkäse spots near the venue or a 2-hour walking tour for introverts.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                            <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                    class="fa-solid fa-sparkles text-amber-500 mr-2"></i>Stretch Idea:</p>
+                            <p class="text-xs text-slate-500">Swap the links for an embedded map, add browser GPS
+                                location, or customize the local persona.</p>
+                        </div>
                     </div>
-                    <div
-                        class="inline-block px-3 py-1 bg-gYellow/10 text-yellow-700 text-xs font-bold rounded-full uppercase tracking-wider mb-6">
-                        Tier 2 • Intermediate
+                    <div class="space-y-2.5">
+                        <a href="maps-starter.html"
+                            class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                            <i class="fa-solid fa-play mr-2 text-xs"></i>Launch Maps Starter
+                        </a>
+                        <a href="maps-starter.html" download="maps-starter.html"
+                            class="block w-full text-center px-4 py-2.5 rounded-xl bg-white text-slate-700 text-sm font-medium border border-slate-200 hover:bg-slate-50 transition-colors">
+                            <i class="fa-solid fa-download mr-2"></i>Download HTML Template
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Maps & AI Mashup</h3>
-                    <p class="text-slate-600 mb-6 min-h-[80px]">
-                        Combine the Google Maps platform with Gemini. Build a tool where clicking a map generates
-                        fictional historical events for that location.
-                    </p>
-                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
-                        <p class="text-sm text-slate-700 font-medium mb-1"><i
-                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
-                        <p class="text-xs text-slate-500">Inherit the codebase and add one ridiculous, undocumented new
-                            feature before time runs out.</p>
-                    </div>
-                    <a href="#"
-                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
-                        View Starter Template
-                    </a>
                 </div>
 
-                <!-- Tier 3 Card -->
+                <!-- Starter 3 Card: Mini-Game -->
                 <div
-                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gRed">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid fa-gamepad text-6xl text-gRed"></i>
+                    class="glass-card rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-t-gRed flex flex-col justify-between">
+                    <div>
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i class="fa-solid fa-gamepad text-6xl text-gRed"></i>
+                        </div>
+                        <div
+                            class="inline-block px-3 py-1 bg-gRed/10 text-gRed text-xs font-bold rounded-full uppercase tracking-wider mb-6">
+                            Creative Build • Starter Code
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">AI Mini-Game</h3>
+                        <p class="text-slate-600 mb-6 min-h-[80px]">
+                            Build a playable browser game where Gemini acts as the game engine or ruthless judge—like
+                            "Survive DevFest with 5% Battery" or a startup pitch roaster.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
+                            <p class="text-sm text-slate-700 font-medium mb-1"><i
+                                    class="fa-solid fa-sparkles text-gRed mr-2"></i>Stretch Idea:</p>
+                            <p class="text-xs text-slate-500">Add a live score counter, custom sound effects, or let the
+                                crowd shout out choices during your pitch.</p>
+                        </div>
                     </div>
-                    <div
-                        class="inline-block px-3 py-1 bg-gRed/10 text-gRed text-xs font-bold rounded-full uppercase tracking-wider mb-6">
-                        Tier 3 • Hard Mode
+                    <div class="space-y-2.5">
+                        <a href="game-starter.html"
+                            class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
+                            <i class="fa-solid fa-play mr-2 text-xs"></i>Launch Game Starter
+                        </a>
+                        <a href="game-starter.html" download="game-starter.html"
+                            class="block w-full text-center px-4 py-2.5 rounded-xl bg-white text-slate-700 text-sm font-medium border border-slate-200 hover:bg-slate-50 transition-colors">
+                            <i class="fa-solid fa-download mr-2"></i>Download HTML Template
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Multiplayer AI Game</h3>
-                    <p class="text-slate-600 mb-6 min-h-[80px]">
-                        Race to build a functional, web-based multiplayer game (trivia, prompt battle, etc.) powered
-                        entirely by Gemini API logic.
-                    </p>
-                    <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100">
-                        <p class="text-sm text-slate-700 font-medium mb-1"><i
-                                class="fa-solid fa-bolt text-amber-500 mr-2"></i>Swap Twist:</p>
-                        <p class="text-xs text-slate-500">Pure chaos. Successfully deploy the broken game you inherit
-                            and pitch it to the room as a "feature."</p>
-                    </div>
-                    <a href="#"
-                        class="block w-full text-center px-4 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors">
-                        View Starter Template
-                    </a>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightning Pitches Section -->
+    <section id="pitches" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-center text-white relative overflow-hidden shadow-xl">
+                <div class="relative z-10">
+                    <span
+                        class="inline-block px-3 py-1 bg-gYellow/20 text-gYellow text-xs font-bold rounded-full uppercase tracking-wider mb-4">
+                        End-of-Day Showcase
+                    </span>
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Ready to Show Off Your Build?</h2>
+                    <p class="text-slate-300 max-w-xl mx-auto mb-8">
+                        No uploads or HDMI cables needed. Join the Vibe Lounge Google Meet 5 minutes before pitches
+                        start to share your screen for 60 seconds. <strong class="text-white">Please join muted with
+                            your device volume turned off!</strong>
+                    </p>
+                    <!-- Replace href with your Google Meet link on the day of the event -->
+                    <a href="INSERT_GOOGLE_MEET_LINK_HERE" target="_blank"
+                        class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition-all hover:-translate-y-0.5 shadow-lg">
+                        <i class="fa-solid fa-video text-gBlue mr-2"></i> Join Pitch Screen-Share (Google Meet)
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -292,13 +351,32 @@
                 <span
                     class="px-4 py-2 bg-slate-100 text-slate-800 rounded-lg font-semibold text-sm border border-slate-200 shadow-sm flex items-center hover:bg-slate-200 transition-colors cursor-default">
                     <img src="yail-logo.png" alt="Young AI Leaders Linz Logo" class="w-5 h-5 mr-2 object-contain">
-                    Young
-                    AI Leaders Linz
+                    Young AI Leaders Linz
                 </span>
             </div>
             <p class="text-slate-400 text-sm text-center">Powered by Google Cloud & Gemini</p>
         </div>
     </footer>
+
+    <!-- Copy-to-Clipboard Helper for Starter Prompt -->
+    <script>
+        const TEMPLATES = {
+            barista: `You are a witty, slightly sarcastic Viennese-style barista working at DevFest Linz.
+Ask the user how their morning is going and what kind of tech they like.
+Based on their answer, prescribe:
+1. A hyper-specific Austrian coffee order (e.g., Verlängerter, Melange, Einspänner) with a funny roast of their choice.
+2. One imaginary or real DevFest Linz talk topic they should attend next.
+Keep responses under 4 sentences and full of charm.`
+        };
+
+        function copyTemplate(key, btn) {
+            navigator.clipboard.writeText(TEMPLATES[key]).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check text-gGreen mr-2"></i>Copied! Paste in AI Studio';
+                setTimeout(() => { btn.innerHTML = original; }, 2500);
+            });
+        }
+    </script>
 
 </body>
 
