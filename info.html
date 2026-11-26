@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Lounge Display | DevFest Linz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { gBlue: '#4285F4', gRed: '#EA4335', gYellow: '#FBBC05', gGreen: '#34A853' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-dots {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: translateY(24px) scale(0.98);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        @keyframes progress {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .animate-progress {
+            animation: progress 8s linear forwards;
+        }
+    </style>
+</head>
+
+<body class="h-screen w-screen overflow-hidden bg-dots font-sans text-slate-900 flex flex-col select-none">
+
+    <!-- Top Bar -->
+    <header
+        class="h-20 px-10 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between z-20">
+        <div class="flex items-center gap-3">
+            <div class="flex gap-1.5">
+                <div class="w-3.5 h-3.5 rounded-full bg-gBlue"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-gRed"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-gYellow"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-gGreen"></div>
+            </div>
+            <span class="font-extrabold text-2xl tracking-tight ml-2">DevFest Linz <span class="text-gBlue">Vibe
+                    Lounge</span></span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gGreen/10 text-gGreen font-bold text-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-gGreen animate-pulse"></span>
+                Open All Day • Zero Pressure
+            </span>
+            <span id="clock" class="font-bold text-xl text-slate-600 tabular-nums"></span>
+        </div>
+    </header>
+
+    <!-- Main Split Layout: Animated Slides (Left) + Persistent QR Sidebar (Right) -->
+    <main class="flex-1 flex overflow-hidden relative">
+
+        <!-- Animated Slide Stage -->
+        <div class="flex-1 relative p-12 flex items-center">
+
+            <!-- SLIDE 1: Hero -->
+            <div class="slide active flex flex-col justify-center px-12">
+                <span
+                    class="inline-block w-fit px-4 py-1.5 rounded-full bg-blue-100 text-gBlue font-bold text-sm uppercase tracking-wider mb-6">
+                    Open-Format AI Workshop
+                </span>
+                <h1 class="text-7xl font-black tracking-tight leading-tight mb-6">
+                    Build with <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-gBlue via-gRed to-gYellow">Gemini</span><br>
+                    at Your Own Pace.
+                </h1>
+                <p class="text-3xl text-slate-600 max-w-3xl leading-relaxed mb-8">
+                    Drop in with a <strong class="text-slate-900">laptop or just your phone</strong>. Experiment with
+                    free Google AI credits and ship something fun in under an hour.
+                </p>
+                <div class="flex gap-6 text-xl font-bold text-slate-700">
+                    <span class="px-5 py-3 bg-white rounded-2xl shadow-sm border border-slate-200"><i
+                            class="fa-solid fa-mobile-screen text-gGreen mr-2"></i>No-Code Friendly</span>
+                    <span class="px-5 py-3 bg-white rounded-2xl shadow-sm border border-slate-200"><i
+                            class="fa-solid fa-award text-gRed mr-2"></i>Free DevFest Pins</span>
+                    <span class="px-5 py-3 bg-white rounded-2xl shadow-sm border border-slate-200"><i
+                            class="fa-solid fa-trophy text-gYellow mr-2"></i>€400 Prize Pool</span>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: How It Works -->
+            <div class="slide flex flex-col justify-center px-12">
+                <h2 class="text-5xl font-black tracking-tight mb-10">How the Vibe Lounge Works</h2>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-gBlue">
+                        <div class="text-gBlue font-black text-2xl mb-2">1. Grab Your Credits</div>
+                        <p class="text-xl text-slate-600">Scan the QR code to claim your Google AI credits (open 9:00 AM
+                            – 9:00 PM) and generate an API key.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-gGreen">
+                        <div class="text-gGreen font-black text-2xl mb-2">2. Build Anything</div>
+                        <p class="text-xl text-slate-600">Stay for 15 minutes or 3 hours. Use a starter template or go
+                            off-script. Mentors are here to help.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-gRed">
+                        <div class="text-gRed font-black text-2xl mb-2">3. Claim Your Pin</div>
+                        <p class="text-xl text-slate-600">Show a mentor your working Gemini demo and instantly score an
+                            exclusive DevFest pin.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-gYellow">
+                        <div class="text-amber-600 font-black text-2xl mb-2">4. 1-Minute Pitches</div>
+                        <p class="text-xl text-slate-600">Ask a mentor to add you to the whiteboard before 15:30 to demo
+                            on the big screen for €400 in prizes!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Starter Templates -->
+            <div class="slide flex flex-col justify-center px-12">
+                <h2 class="text-5xl font-black tracking-tight mb-3">Need a Spark? Starter Templates</h2>
+                <p class="text-2xl text-slate-500 mb-10">Launch right from your phone or laptop—zero setup required.</p>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="bg-white p-7 rounded-3xl shadow-sm border-t-8 border-gGreen">
+                        <span
+                            class="text-xs font-bold uppercase tracking-wider text-gGreen bg-gGreen/10 px-3 py-1 rounded-full">Phone
+                            Friendly</span>
+                        <h3 class="text-2xl font-extrabold mt-4 mb-3">Linz Barista / AI Portfolio</h3>
+                        <p class="text-lg text-slate-600">Build a custom AI assistant in Google AI Studio in 15 minutes
+                            with zero code.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl shadow-sm border-t-8 border-gYellow">
+                        <span
+                            class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-gYellow/20 px-3 py-1 rounded-full">API
+                            Mashup</span>
+                        <h3 class="text-2xl font-extrabold mt-4 mb-3">Maps + Gemini Guide</h3>
+                        <p class="text-lg text-slate-600">Generate a quirky local Linz guide with clickable Google Maps
+                            links.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl shadow-sm border-t-8 border-gRed">
+                        <span
+                            class="text-xs font-bold uppercase tracking-wider text-gRed bg-gRed/10 px-3 py-1 rounded-full">Creative
+                            Build</span>
+                        <h3 class="text-2xl font-extrabold mt-4 mb-3">AI Mini-Game</h3>
+                        <p class="text-lg text-slate-600">Build "Survive DevFest with 5% Battery" or a ruthless startup
+                            pitch roaster.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Lightning Pitches -->
+            <div class="slide flex flex-col justify-center px-12">
+                <div class="bg-slate-900 text-white p-12 rounded-3xl shadow-xl">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-gYellow/20 text-gYellow font-bold text-sm uppercase tracking-wider mb-6">
+                        End-of-Day Showcase • €400 Prize Pool
+                    </span>
+                    <h2 class="text-6xl font-black tracking-tight mb-6">60-Second Lightning Pitches</h2>
+                    <p class="text-2xl text-slate-300 leading-relaxed mb-8">
+                        No slides. No uploads. Just share your screen via Google Meet and show off what you built.
+                    </p>
+                    <div class="flex flex-wrap gap-6 text-xl font-bold">
+                        <div class="bg-slate-800 px-6 py-4 rounded-2xl border border-slate-700">
+                            <i class="fa-solid fa-chalkboard-user text-gYellow mr-2"></i> Sign up with a mentor before
+                            15:30
+                        </div>
+                        <div class="bg-slate-800 px-6 py-4 rounded-2xl border border-slate-700">
+                            <i class="fa-solid fa-volume-xmark text-gRed mr-2"></i> Join Meet muted & volume OFF
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Persistent QR Code Sidebar -->
+        <aside
+            class="w-96 bg-slate-900 text-white p-10 flex flex-col items-center justify-center text-center shadow-2xl z-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-gBlue mb-3">Start Building Now</span>
+            <h3 class="text-3xl font-extrabold mb-6">Scan to Open the Hub</h3>
+
+            <!-- Auto-generates QR code for your landing page URL (update the URL in the script below) -->
+            <div class="bg-white p-4 rounded-3xl shadow-lg mb-6">
+                <img id="qrCode" alt="Vibe Lounge QR Code" class="w-56 h-56 object-contain">
+            </div>
+
+            <p class="text-slate-300 text-base mb-6">
+                Claim Google AI credits, launch starter templates, and join the pitch Meet.
+            </p>
+
+            <!-- Slide Indicator Dots -->
+            <div id="dots" class="flex gap-2.5 mt-4"></div>
+        </aside>
+
+    </main>
+
+    <!-- Footer + Progress Bar -->
+    <footer
+        class="relative h-14 bg-white border-t border-slate-200 px-10 flex items-center justify-between text-sm text-slate-500 font-semibold">
+        <div id="progressBar"
+            class="absolute top-0 left-0 h-1 bg-gradient-to-r from-gBlue via-gRed to-gYellow animate-progress"></div>
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-2"><img src="dev-fest-logo.png" class="h-5 object-contain" alt=""> GDG
+                Linz</span>
+            <span class="flex items-center gap-2"><img src="dynatrace-logo.png" class="h-5 object-contain" alt="">
+                Dynatrace</span>
+            <span class="flex items-center gap-2"><img src="yail-logo.png" class="h-5 object-contain" alt=""> Young AI
+                Leaders Linz</span>
+        </div>
+        <span>Powered by Google Cloud & Gemini</span>
+    </footer>
+
+    <script>
+        // 1. SET YOUR LIVE GITHUB PAGES URL HERE
+        const LANDING_PAGE_URL = "https://bayim7.github.io/devfest-linz-vibe-lounge/";
+        document.getElementById('qrCode').src =
+            `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(LANDING_PAGE_URL)}`;
+
+        // 2. SLIDE ROTATION (8 seconds per slide)
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        const progressBar = document.getElementById('progressBar');
+        let current = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-8 bg-gBlue' : 'w-2.5 bg-slate-700'}`;
+            dotsContainer.appendChild(dot);
+        });
+
+        function showSlide(index) {
+            slides[current].classList.remove('active');
+            dotsContainer.children[current].className = 'h-2.5 w-2.5 rounded-full bg-slate-700 transition-all duration-300';
+
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dotsContainer.children[current].className = 'h-2.5 w-8 rounded-full bg-gBlue transition-all duration-300';
+
+            // Restart progress bar animation
+            progressBar.classList.remove('animate-progress');
+            void progressBar.offsetWidth;
+            progressBar.classList.add('animate-progress');
+        }
+
+        let timer = setInterval(() => showSlide(current + 1), 8000);
+
+        // Allow manual skip with Left/Right arrow keys
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') { clearInterval(timer); showSlide(current + 1); timer = setInterval(() => showSlide(current + 1), 8000); }
+            if (e.key === 'ArrowLeft') { clearInterval(timer); showSlide(current - 1); timer = setInterval(() => showSlide(current + 1), 8000); }
+        });
+
+        // 3. LIVE CLOCK
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+
+</html>
