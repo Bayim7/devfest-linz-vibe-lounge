@@ -106,8 +106,8 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <!-- Replace href with the official Google AI credit link -->
-                <a href="INSERT_GOOGLE_CREDIT_LINK_HERE" target="_blank"
+                <!-- Replace href with the main DevFest Linz program page URL -->
+                <a href="https://devfestlinz2026.vercel.app/hackathon" target="_blank"
                     class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-xl text-white bg-gBlue hover:bg-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1">
                     <i class="fa-solid fa-cloud-arrow-down mr-2"></i> Claim Google AI Credits
                 </a>
@@ -116,6 +116,12 @@
                     Explore Starter Templates
                 </a>
             </div>
+
+            <p class="mt-4 text-sm text-slate-500">
+                <i class="fa-regular fa-clock mr-1.5 text-gBlue"></i>
+                Google AI credit redemption is open <strong class="text-slate-700">9:00 AM – 9:00 PM</strong> on the
+                main DevFest page.
+            </p>
         </div>
 
         <!-- Decorative background elements -->
@@ -144,8 +150,8 @@
                         <i class="fa-solid fa-ticket text-2xl text-gBlue"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">1. Grab Your Credits</h3>
-                    <p class="text-slate-400 text-sm">Claim your Google AI credits and generate an API key. Already
-                        claimed yours from the main DevFest page? Jump straight to Step 2.</p>
+                    <p class="text-slate-400 text-sm">Claim your Google AI credits (open 9:00 AM – 9:00 PM) and generate
+                        an API key. Already claimed yours? Jump straight to Step 2.</p>
                 </div>
                 <!-- Step 2 -->
                 <div class="text-center">
@@ -174,9 +180,10 @@
                         <i class="fa-solid fa-microphone-lines text-2xl text-gYellow"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gYellow">4. Lightning Pitches</h3>
-                    <p class="text-slate-400 text-sm">Stick around for the finale! Pitch your creation in 60 seconds.
-                        <strong class="text-white">Loudest audience applause</strong> wins the prizes.
-                    </p>
+                    <p c<p class="text-slate-400 text-sm">Want to pitch? Ask a mentor to add you to the whiteboard
+                        before
+                        15:30! Show off your build in 60 seconds for a shot at the <strong class="text-white">€400 prize
+                            pool</strong>.</p>.</p>
                 </div>
             </div>
         </div>
@@ -310,16 +317,21 @@
                 <div class="relative z-10">
                     <span
                         class="inline-block px-3 py-1 bg-gYellow/20 text-gYellow text-xs font-bold rounded-full uppercase tracking-wider mb-4">
-                        End-of-Day Showcase
+                        End-of-Day Showcase • Sign-Up Closes at 15:30
                     </span>
                     <h2 class="text-3xl font-bold tracking-tight mb-4">Ready to Show Off Your Build?</h2>
-                    <p class="text-slate-300 max-w-xl mx-auto mb-8">
-                        No uploads or HDMI cables needed. Join the Vibe Lounge Google Meet 5 minutes before pitches
-                        start to share your screen for 60 seconds. <strong class="text-white">Please join muted with
-                            your device volume turned off!</strong>
+                    <p class="text-slate-300 max-w-2xl mx-auto mb-4">
+                        No slides or uploads needed—just 60 seconds to demo live! When your build is ready,
+                        <strong class="text-white">show a mentor to claim your DevFest pin and get added to the pitch
+                            whiteboard before 15:30</strong>
+                        (limited spots, first come, first served).
                     </p>
-                    <!-- Replace href with your Google Meet link on the day of the event -->
-                    <a href="INSERT_GOOGLE_MEET_LINK_HERE" target="_blank"
+                    <p class="text-slate-400 text-sm max-w-xl mx-auto mb-8">
+                        Confirmed presenters: join the Google Meet 5 minutes before pitches start to share your screen.
+                        <strong class="text-white">Please join muted with your device volume turned off!</strong>
+                    </p>
+                    <!-- Replace href with your scheduled Google Meet link -->
+                    <a href="https://meet.google.com/qvy-swsh-hjb" target="_blank"
                         class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition-all hover:-translate-y-0.5 shadow-lg">
                         <i class="fa-solid fa-video text-gBlue mr-2"></i> Join Pitch Screen-Share (Google Meet)
                     </a>
@@ -371,13 +383,4 @@ Keep responses under 4 sentences and full of charm.`
 
         function copyTemplate(key, btn) {
             navigator.clipboard.writeText(TEMPLATES[key]).then(() => {
-                const original = btn.innerHTML;
-                btn.innerHTML = '<i class="fa-solid fa-check text-gGreen mr-2"></i>Copied! Paste in AI Studio';
-                setTimeout(() => { btn.innerHTML = original; }, 2500);
-            });
-        }
-    </script>
-
-</body>
-
-</html>
+                const
